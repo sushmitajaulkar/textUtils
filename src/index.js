@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import 'mdbreact/dist/css/mdb.css';
+// import 'bootstrap@5.1.3/dist/css/bootstrap.min.css';
+// import 'bootstrap@5.1.3/dist/css/bootstrap.bundle.min.css';
+
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 

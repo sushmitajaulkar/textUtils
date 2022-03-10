@@ -1,5 +1,6 @@
 // import { render } from "@testing-library/react";
 import React, {useState} from "react";
+
 // import {createUndoRedo} from 'react-undo-redo'
 
 export default function TextForm(props) {
@@ -11,30 +12,38 @@ export default function TextForm(props) {
     // console.log("Uppercase was clicked"+ text);
     let newText = text.toUpperCase();
     setText(newText);
+    props.showAlert("Converted to uppercase!", "success")
   }
 
   const handleLowClick = () => {
     // console.log("Uppercase was clicked"+ text);
     let newText = text.toLowerCase();
     setText(newText);
+    props.showAlert("Converted to lowercase!", "success")
   }
 
   const handleClrClick = () => {
     // console.log();
     let newText = ' ';
     setText(newText);
+    props.showAlert("Text cleared!", "success")
+
   }
 
   const handleCopy = () => {
     let text = document.getElementById("mybox");
     text.select();
     navigator.clipboard.writeText(text.value);
+    props.showAlert("Copied TO Clipboard!", "success")
+
   }
 
   const handleExtraSpaces = () => {
     // console.log();
     let newText = text.split(/[ ]+/);
     setText(newText.join(" "));
+    props.showAlert("Extra spaces Removed!", "success")
+
   }
   // const handleUnClick = () => {
   //   // console.log();
