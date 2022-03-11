@@ -46,11 +46,10 @@ export default function TextForm(props) {
   //   setText(newText);
   // }
 
-  // const handleReClick = () => {
+  //  handleReClick = () => {
   //   // console.log();
   //   let newText = text.redo();
   //   setText(newText);
-  // }
 
   const handleOnChange = (event) => {
     // console.log("On Change");
